@@ -1,0 +1,86 @@
+<!-- ******************Formulario de cadastro de Cliente **********************-->
+
+<%-include('../partials/header'); %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h4 class="col-lg-12 offset-md-5 mt-3">Cadastrar Cliente</h4>
+                <form class="formulario" name = "formCadastro" action="/cliente/cadastrar" method="POST">
+                    <div class="form-group divinput">
+                        <div class="col-md-6 offset-md-3">
+                            <input type="text" class="form-control" id="nome" name="nome" required
+                            minlength="6" placeholder="Nome Completo" >
+                        </div>
+                    </div>
+                    <div class="form-group divinput">
+                        <div class="col-md-6 offset-md-3">
+<!-- chama a função validarCPF para validar o CPF -->
+                          <input type="text" class="form-control" id="cpf" maxlength="14" name="cpf" onblur="return validarCPF(this);"
+                          placeholder="CPF: XXX.XXX.XXX-XX" >
+                        </div>
+                    </div>
+                    <div class="form-group divinput">
+                        <div class="col-md-6 offset-md-3">
+                           <input type="text" class="form-control" id="dt_nasc" name="dt_nasc" required placeholder="Data de Nascimento XX/XX/XXXXX" >
+                       </div>
+                    </div>                                         
+                    <div class="form-group divinput">
+                        <div class="col-md-6 offset-md-3">
+                            <input type="text" class="form-control" id="telefone" name="telefone" placeholder="Tel. (DD) XXXXX.XXXX" > 
+                        </div> 
+                    </div>                                         
+                    <div class="form-group divinput">
+                        <div class="col-md-6 offset-md-3 mt-2">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Email    ex:email@email.com"> 
+                        </div> 
+                    </div>                                         
+                     <div class="form-group">
+                        <div class="col-md-6 offset-md-3"> 
+                             <input type="text" class="form-control" id="cep" name="cep" maxlength="9" 
+                            placeholder="CEP  XXXXX-XXX" required />   
+                         </div> 
+                     </div> 
+                    <div class="form-group divinput">
+                        <div class="col-md-6 offset-md-3">
+                           <input type="text" class="form-control" id="logradouro" name="logradouro" placeholder="Endereço" > 
+                        </div>
+                    </div>
+                    <div class="form-group divinput">
+                        <div class="col-md-6 offset-md-3">
+                           <input type="text" class="form-control" id="bairro" name="bairro" placeholder="Bairro" > 
+                        </div>
+                    </div>
+                    <div class="form-group divinput">
+                        <div class="col-md-6 offset-md-3">
+                            <input type="text" class="form-control" id="localidade" name="localidade" placeholder="Cidade" >
+                        </div>      
+                    </div>
+                    <div class="form-group divinput">
+                        <div class="col-md-6 offset-md-3">
+                            <input type="text" class="form-control" id="uf" name="uf" maxlength="2" placeholder="UF" >
+                        </div> 
+                    </div>
+                    <div class="form-group divinput">
+                        <div class="offset-md-3">
+                     <!-- <div class="col mt-3 text-end">  -->
+                    <!-- botao Enviar tipo button(já é tipo button) devido ao uso da função validaDados no onclick-->
+                     <!-- <button type="button" class="btn btn3" onclick="validadados()" value="Exibir Alert">Enviar</button> -->
+
+                             <button  class="btn" onclick="validadados()" value="Exibir Alert" >Enviar</button>
+                     <!-- <button (click)="validadados()"  class="btn btn3" >Enviar</button> -->
+                     <!-- botao Limpar tipo reset -->
+                             <button type="reset" class="btn">Limpar</button>
+                        </div>
+                    </div>
+                </form>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/js/validacao.js"></script>
+
+<%-include('../partials/footer.ejs'); %>
+
+</body>
+</html>

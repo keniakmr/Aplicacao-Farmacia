@@ -1,0 +1,81 @@
+<!-- ******************Formulario de Edição de Cliente **********************-->
+
+  <%-include('../partials/header'); %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h4 class="col-lg-12 offset-md-5 mt-3">Alterar Cliente</h4>
+                <form class ="formulario" action="/cliente/editar" method="POST">
+                    <div class="form-group divinput">
+                        <div class="col-md-6 offset-md-3">
+                            <input type="text" class="form-control" id="nome" name="nome" 
+                           placeholder="Nome Completo" value="<%= cliente.nome %>" >
+                        </div>
+                    </div>
+                    <div class="form-group divinput">
+                        <div class="col-md-6 offset-md-3">
+                          <input type="text" class="form-control" id="cpf" name="cpf" 
+                          placeholder="CPF: XXX.XXX.XXX-XX" value="<%= cliente.cpf %>">
+                        </div>
+                    </div>
+                    <div class="form-group divinput">
+                        <div class="col-md-6 offset-md-3">
+                           <input type="text" class="form-control" id="dt_nasc" name="dt_nasc" placeholder="Data de Nascimento XX/XX/XXXXX" value="<%= cliente.dt_nasc %>" >
+                       </div>
+                    </div>                                         
+                    <div class="form-group divinput">
+                        <div class="col-md-6 offset-md-3">
+                            <input type="text" class="form-control" id="telefone" name="telefone" placeholder="Tel. (DD) XXXXX.XXXX" value="<%= cliente.telefone %>"> 
+                        </div> 
+                    </div>                                         
+                    <div class="form-group divinput">
+                        <div class="col-md-6 offset-md-3 mt-2">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Email    ex:email@email.com" value="<%= cliente.email %>"> 
+                        </div> 
+                    </div>                                         
+                     <div class="form-group">
+                        <div class="col-md-6 offset-md-3"> 
+                             <input type="text" class="form-control" id="cep" name="cep" 
+                               placeholder="CEP  XXXXX-XXX"  value="<%= cliente.cep %>" />   
+                         </div> 
+                     </div> 
+                    <div class="form-group divinput">
+                        <div class="col-md-6 offset-md-3">
+                           <input type="text" class="form-control" id="logradouro" name="logradouro" placeholder="Endereço" value="<%= cliente.endereco %>"> 
+                        </div>
+                    </div>
+                    <div class="form-group divinput">
+                        <div class="col-md-6 offset-md-3">
+                           <input type="text" class="form-control" id="bairro" name="bairro" placeholder="Bairro" value="<%= cliente.bairro %>" > 
+                        </div>
+                    </div>
+                    <div class="form-group divinput">
+                        <div class="col-md-6 offset-md-3">
+                            <input type="text" class="form-control" id="localidade" name="localidade" placeholder="Cidade" value="<%= cliente.cidade %>">
+                        </div>      
+                    </div>
+                    <div class="form-group divinput">
+                        <div class="col-md-6 offset-md-3">
+                            <input type="text" class="form-control" id="uf" name="uf" placeholder="UF" value="<%= cliente.uf %>" >
+                        </div> 
+                    </div>
+                    <div class="form-group divinput">
+                        <div class="offset-md-3">
+                             
+                             <!-- <button  class="btn" onclick="validadados()" value="Exibir Alert" >Enviar</button> -->
+                             <input type="hidden" name="id" value="<%=cliente._id%>"/>
+                             <button type="submit" class="btn">Enviar</button>
+                        </div>
+                    </div>
+                </form>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/js/validacao.js"></script>
+
+<%-include('../partials/footer.ejs'); %>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100&display=swap');
+* {
+  font-family: 'roboto';
+}
+
+h3{
+    text-align: center;
+}
+h4{
+    color: #00761d;
+}
+.formulario{
+     margin: 0 auto;
+    width: 600px;
+    padding-right: 300px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    background-color: whitesmoke;
+ }
+ .formulario p{
+    text-align: center;
+    width: 100%;
+    font-size: 1.5em;
+    color: #00761d;
+}
+.divinput{
+    width: 100%;
+    margin:15px 0px;
+    
+}
+.divinput label,
+.divinput span{
+    padding-left: 10px;
+    font-size: 1.1em;
+    width: 100%;
+}
+input[type=text],
+input[type=email]{
+    width: 300%;
+    padding-left: 10px;
+    height: 35px;
+    line-height: 30px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+.navbar{
+    background-color: whitesmoke!important;
+    color: #00761d;
+}
+footer{
+    background-color: whitesmoke!important;
+    color: #00761d;
+}
+.text-footer{
+    color: #00761d;
+    background-color: whitesmoke;
+}
+.container{
+    background-color: white!important;
+     height: 95vh;
+    width: 100vw;
+}
+.loginContainer{
+    background-image: url("../img/imagem-capa.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    padding: 70px 70px;
+    filter: alpha(opacity=30);
+    opacity:0.5;
+}
+.btn{
+    background-color: #00761d;
+    width: 25%;
+    color: white;
+    display: inline;
+    margin: 0.8rem auto 0 auto;
+    padding: .5rem 0;
+}
+
+.btn:hover{
+    box-shadow:2px 2px 2px 2px#00761d;
+    background-color: white ;
+    color: #00761d;;
+}
+
+.navbar a{
+    color: #00761d!important;
+    background-color: whitesmoke;
+    font-size: 18px;
+}
+ .logo {
+    width: 200px;
+  }
+  .link-dark,
+  .bi{
+    color: #00761d;
+  }
