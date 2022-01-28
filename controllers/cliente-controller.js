@@ -69,7 +69,7 @@ exports.editar_cliente_get = (req, res) => {
    
 exports.editar_cliente_post = (req,res) => {
 
-    console.log(id = req.body.id)
+    id = req.body.id
 
     Cliente.findById(id,(err,cliente) => {
         if (err)

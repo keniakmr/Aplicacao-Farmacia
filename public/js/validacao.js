@@ -38,15 +38,6 @@ function _cpf(cpf) {
     }
   }
   
-  const apresentaDados = resultado => {
-    for (let campo in resultado) {
-      if (document.querySelector('#' + campo)) {
-        console.log(campo);
-        document.querySelector('#' + campo).value = resultado[campo];
-      }
-    }
-  };
-  
 
   //Validando os  campos formulário de cadastro
   function validadados() {
@@ -60,31 +51,27 @@ function _cpf(cpf) {
   
     if (
       document.formCadastro.cpf.value == '' ||
-      document.formCadastro.cpf.value.length < 11
-    ) {
+      document.formCadastro.cpf.value.length < 11 ) {
       alert('Informe um CPF válido');
       document.formCadastro.cpf.focus();
       return false;
     }
 
     if (
-      document.formCadastro.telefone.value == '' ||
-      document.formCadastro.telefone.value.length < 10
-    ) {
-      alert('Informe um telefone válido');
-      document.formCadastro.telefone.focus();
-      return false;
-    }
-  
-    if (
       document.formCadastro.dt_nasc.value == '' ||
-      document.formCadastro.dt_nasc.value.length < 10
-    ) {
+      document.formCadastro.dt_nasc.value.length < 10 ) {
       alert('Informe uma data válida');
       document.formCadastro.dt_nasc.focus();
       return false;
     }
-  
+    if (
+      document.formCadastro.telefone.value == '' ||
+      document.formCadastro.telefone.value.length < 10 ) {
+      alert('Informe um telefone válido');
+      document.formCadastro.telefone.focus();
+      return false;
+    }
+    
     if (document.formCadastro.email.value.length < 10) {
       alert('Informe um E-mail válido');
       document.formCadastro.email.focus();
@@ -93,8 +80,7 @@ function _cpf(cpf) {
   
      if (
       document.formCadastro.cep.value == '' ||
-      document.formCadastro.cep.value.length < 7
-    ) {
+      document.formCadastro.cep.value.length < 7 ) {
       alert('Informe um CEP válido');
       document.formCadastro.cep.focus();
       return false;
@@ -109,6 +95,14 @@ function _cpf(cpf) {
     }
   
     if (
+      document.formCadastro.bairro.value == '' ||
+      document.formCadastro.bairro.value.length < 5
+    ) {
+      alert('Informe um bairro válido');
+      document.formCadastro.bairro.focus();
+      return false;
+    }
+    if (
       document.formCadastro.localidade.value == '' ||
       document.formCadastro.localidade.value.length < 5
     ) {
@@ -118,8 +112,7 @@ function _cpf(cpf) {
     }
     if (
       document.formCadastro.uf.value == '' ||
-      document.formCadastro.uf.value.length < 2
-    ) {
+      document.formCadastro.uf.value.length < 2 ) {
       alert('Informe um estado válido');
       document.formCadastro.uf.focus();
       return false;
@@ -127,17 +120,6 @@ function _cpf(cpf) {
     {
       alert('Cadastro Efetuado com Sucesso');
   
-      // limpa os campos do formulario qdo ele retorna a tela fica limpa
-      // document.formCadastro.nome.value = '';
-      // document.formCadastro.email.value = '';
-      // document.formCadastro.dt_nasc.value = '';
-      // document.formCadastro.telefone.value = '';
-      // document.formCadastro.cpf.value = '';
-      // document.formCadastro.cep.value = '';
-      // document.formCadastro.logradouro.value = '';
-      // document.formCadastro.bairro.value = '';
-      // document.formCadastro.localidade.value = '';
-      // document.formCadastro.uf.value = '';
     }
   }
   

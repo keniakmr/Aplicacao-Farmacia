@@ -13,6 +13,4 @@ const Cliente = mongoose.model('cliente', {
     uf: String
 })
  
-console.log(Cliente);
-
 module.exports = Cliente
